@@ -1,0 +1,41 @@
+{%load static%}
+
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Offcanvas navbar large">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+      <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+         <div class="text-end">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'home1' %}">Home</a>
+            </li>
+            <li>
+            <a class="nav-link active" aria-current="page" href="{% url 'conta' %}">Carteira</a>
+            </li>
+            <li class="nav-item"><a href="" class="nav-link active" aria-current="page">Usuario: &emsp;{{user.username}}</a></li>
+           &emsp;
+            <li class="nav-item">
+                <a href="{% url 'logaut_user' %}" class="btn btn-secondary">Sair</a>
+            {% else %}
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}" class="btn btn-primary"> Login </a>
+
+        
+            {% endif %}
+
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <link href="{% static 'js/bootstrap.bundle.min.js' %}" rel="stylesheet">

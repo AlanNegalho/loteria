@@ -1,0 +1,81 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+{% include 'loteria/parciais/_nave.html' %}
+  <!--
+<form id="formulario" action="{% url 'processa_formulario' %}" method="POST">
+
+-->
+<center><h3>Mega-Sena</h3></center>
+<hr/>
+
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <p class="col-md-8 fs-4">
+        <form action="{% url 'processa_formulario' %}" method="POST">
+            {% csrf_token %}  
+            <h5>&emsp;&emsp;Faça sua Aposta!</h5>
+           <!-- <table>
+                {{form.as_table}}
+            </table>
+            <input id="but1" type="submit" onclick="return alert('Aposta realisada com sucesso..!')"/>
+          
+          <input type="text" id="username" name="username" maxlength="10">
+          -->
+          <label for="number">Nº 1</label>
+          <input type="number" id="number" name="number">
+          <label for="number">Nº 2</label>
+          <input type="number" id="number1" name="number1">
+          <br>
+          <label for="number">Nº 3</label>
+          <input type="number" id="number2" name="number2">
+          <label for="number">Nº 4</label>
+          <input type="number" id="number3" name="number3">
+          <br>
+          <label for="number">Nº 5</label>
+          <input type="number" id="number4" name="number4">
+          <label for="number">Nº 6</label>
+          <input type="number" id="number5" name="number5">
+          <br>
+          <input type="submit" value="ok" onclick="return alert('Aposta realisada com sucesso..!')"/>
+          </form>
+            <br>
+            <p>
+            <h3>Pelo sistema</h3>
+            <form action="{% url 'sistema' %}" method="POST">
+            {% csrf_token %} 
+           
+            <select name="quantidade">
+                <option value="01">06</option>
+             <!--   <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>-->
+            </select>
+            <input id="but1" type="submit" onclick="return alert('Aposta realisada com sucesso..!')"/>
+             
+            </form>
+    </div>
+    <a href="{% url 'listar_jogo' %}">Listar jogos</a>
+  </div>
+  
+  <!--
+    <a href="{% url 'listar_jogo' %}" class="btn btn-primary">listar_jogos</a>
+  -->
+
+<body>
+    {% include 'loteria/parciais/_rodape.html' %}
+</body>
+</html>

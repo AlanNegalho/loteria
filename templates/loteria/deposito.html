@@ -1,0 +1,47 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+{% include 'parciais/_nave.html' %}
+<br>
+<br>
+
+<div class="modal modal-signin position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSignin">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-header p-5 pb-4 border-bottom-0">
+          <!-- <h1 class="modal-title fs-5" >Modal title</h1> -->
+          <h1 class="fw-bold mb-0 fs-2">Deposito</h1>
+        
+        </div>
+        <div class="modal-body p-5 pt-0">
+            <form action="{% url 'deposito' %}" method="post">
+                {%csrf_token%}
+                    <div class="mb-3">
+                    {{form.as_p}}
+                     </div>
+                     
+                     <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" onclick="return alert('Deposito realisado com sucesso..!')" type="submit">depositar</button>
+                </form>
+            
+            <small class="text-muted"></small>
+            
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<div class="p-5 mb-4 bg-light rounded-3">
+   
+  </div> 

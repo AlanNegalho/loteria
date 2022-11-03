@@ -1,0 +1,192 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="st.css">
+    <script src="{% static 'js/script.js' %}" defer></script>
+    
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .box{
+            display: flex;
+            border: 1px solid;
+            margin: 2px;
+            width: 250px;
+            padding-left: 4px;
+        }
+
+        .img{
+            height: 50px;
+            width: 120px;
+        }
+
+        .name{
+            font-family: Inter, Arial, Helvetica, sans-serif;
+        }
+
+        .form{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn{
+            margin-top: 5px;
+        }
+
+        .title{
+            text-align: center;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+{% include 'parciais/_nave.html' %}
+<body>
+
+    <h1 class="title display-6 fw-bold text-black">Jogo do bicho</h1>
+
+        <form class="form" action="#" method="post">
+            {% csrf_token %} 
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simavestruz" >
+                <img class="img" src="{% static 'Img/1.svg' %}" alt="Avestruz">
+                <center><p class="name">Avestruz<br>01-02-03-04</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simaguia">
+                <img class="img" src="{% static 'Img/2.svg' %}" alt="Águia">
+                <center><p class="name">Águia<br>05-06-07-08</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simburro">
+                <img class="img" src="{% static 'Img/3.svg' %}" alt="Burro">
+                <center><p class="name">Burro<br>09-10-11-12</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simborboleta">
+                <img class="img" src="{% static 'Img/4.svg' %}" alt="Borboleta">
+                <center><p class="name">Borboleta<br>13-14-15-16</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simcachorro">
+                <img class="img" src="{% static 'Img/5.svg' %}" alt="Cachorro">
+                <center><p class="name">Cachorro<br>17-18-19-20</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simcabra">
+                <img class="img" src="{% static 'Img/6.svg' %}" alt="Cabra">
+                <center><p class="name">Cabra<br>21-22-23-24</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simcarneiro">
+                <img class="img" src="{% static 'Img/7.svg' %}" alt="Carneiro">
+                <center><p class="name">Carneiro<br>25-26-27-28</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simcamelo">
+                <img class="img" src="{% static 'Img/8.svg' %}" alt="Camelo">
+                <center><p class="name">Camelo<br>29-30-31-32</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simcobra">
+                <img class="img" src="{% static 'Img/9.svg' %}" alt="Cobra">
+                <center><p class="name">Cobra<br>33-34-35-36</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simcoelho">
+                <img class="img" src="{% static 'Img/10.svg' %}" alt="Coelho">
+                <center><p class="name">Coelho<br>37-38-39-40</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simcavalo">
+                <img class="img" src="{% static 'Img/11.svg' %}" alt="Cavalo">
+                <center><p class="name">Cavalo<br>41-42-43-44</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simelefante">
+                <img class="img" src="{% static 'Img/12.svg' %}" alt="Elefante">
+                <center><p class="name">Elefante<br>45-46-47-48</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simgalo">
+                <img class="img" src="{% static 'Img/13.svg' %}" alt="Galo">
+                <center><p class="name">Galo<br>49-50-51-52</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simgato">
+                <img class="img" src="{% static 'Img/14.svg' %}" alt="Gato">
+                <center><p class="name">Gato<br>53-54-55-56</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simajacaré">
+                <img class="img" src="{% static 'Img/15.svg' %}" alt="Jacaré">
+                <center><p class="name">Jacaré<br>57-58-59-60</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simleão">
+                <img class="img" src="{% static 'Img/16.svg' %}" alt="Leão">
+                <center><p class="name">Leão<br>61-62-63-64</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simmacaco">
+                <img class="img" src="{% static 'Img/17.svg' %}" alt="Macaco">
+                <center><p class="name">Macaco<br>65-66-67-68</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simporco">
+                <img class="img" src="{% static 'Img/18.svg' %}" alt="Porco">
+                <center><p class="name">Porco<br>69-70-71-72</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simpavão">
+                <img class="img" src="{% static 'Img/19.svg' %}" alt="Avestruz">
+                <center><p class="name">Avestruz<br>73-74-75-76</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simperu">
+                <img class="img" src="{% static 'Img/20.svg' %}" alt="Peru">
+                <center><p class="name">Peru<br>77-78-79-80</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simtouro">
+                <img class="img" src="{% static 'Img/21.svg' %}" alt="Touro">
+                <center><p class="name">Touro<br>81-82-83-84</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simtigre">
+                <img class="img" src="{% static 'Img/22.svg' %}" alt="Tigre">
+                <center><p class="name">Tigre<br>85-86-87-88</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simurso">
+                <img class="img" src="{% static 'Img/23.svg' %}" alt="Urso">
+                <center><p class="name">Urso<br>89-90-91-92</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simveado">
+                <img class="img" src="{% static 'Img/24.svg' %}" alt="Veado">
+                <center><p class="name">Veado<br>93-94-95-96</p> </center>
+            </div>
+            <div class="box">
+                <input required class="checkbox" type="checkbox" name="animal" id="simvaca">
+                <img class="img" src="{% static 'Img/25.svg' %}" alt="Vaca">
+                <center><p class="name">Vaca<br>97-98-99-00</p> </center>
+            </div>
+
+            <input class="btn btn-primary" type="submit" value="Apostar" id="enviar">
+        </form>
+
+</body>
+</html>

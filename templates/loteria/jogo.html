@@ -1,0 +1,63 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+
+      {% include 'parciais/_nave.html' %}
+
+<body>
+<center><h3>Mega-Sena</h3></center>
+<hr/>
+</body>
+
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{% static 'Img/mega.jpg' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="100%" height="100%" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3"></h1>
+        <p class="lead">
+
+          <form action="{% url 'processa_formulario' %}" method="POST">
+            {% csrf_token %}  
+            <h5>&emsp;&emsp;Faça sua Aposta!</h5>
+           
+          <label for="number">Nº 1</label>
+          <input type="number" id="number" name="number">
+          <br>
+          <label for="number">Nº 2</label>
+          <input type="number" id="number1" name="number1">
+          <br>
+          <label for="number">Nº 3</label>
+          <input type="number" id="number2" name="number2">
+          <br>
+          <label for="number">Nº 4</label>
+          <input type="number" id="number3" name="number3">
+          <br>
+          <label for="number">Nº 5</label>
+          <input type="number" id="number4" name="number4">
+          <br>
+          <label for="number">Nº 6</label>
+          <input type="number" id="number5" name="number5">
+          <br>
+          <br>
+          <input type="submit" class="btn btn-primary" value="&emsp;ok&emsp;" onclick="return alert('Aposta realisada com sucesso..!')"/>
+          </form>
+          <p>
+          <h6>Meus Jogos</h6>
+          <p>
+           <a href="{% url 'listar_jogo' %}">Listar</a>
+
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+  {% include 'parciais/_rodape.html' %}
