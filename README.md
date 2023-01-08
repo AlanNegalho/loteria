@@ -1,7 +1,5 @@
 # loteria
 
-## 🛠️ Em desenvolvimento.
-
 ## 📁 Acesso ao projeto
 
 **É possível baixar ou acessar o código fonte do projeto no [Link](https://github.com/AlanNegalho/loteria.git) ou clone o repositório**
@@ -142,5 +140,6 @@ Acesse o link da aplicação:
 ```python
 http://127.0.0.1:8000/
 ```
+
 
 ⌨️ com ❤️ por [Alan Negalho](https://github.com/AlanNegalho) 😊
