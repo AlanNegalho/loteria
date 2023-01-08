@@ -141,5 +141,4 @@ Acesse o link da aplicação:
 http://127.0.0.1:8000/
 ```
 
-
 ⌨️ com ❤️ por [Alan Negalho](https://github.com/AlanNegalho) 😊
